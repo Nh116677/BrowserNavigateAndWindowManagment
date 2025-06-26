@@ -40,30 +40,48 @@ public class FormSubmissionUsingLocators {
         driver.get("https://www.syntaxprojects.com/locator-homework.php");
 
         //send the firstname to the text box
-        WebElement firstName = driver.findElement(By.id("first_name"));
+        WebElement firstName = driver.findElement(By.id("fullName"));
         firstName.sendKeys("John");
 
-        //send the lastname
-
-        WebElement lastName = driver.findElement((By.name("last_name")));
-        lastName.sendKeys("Smith");
-
         //send by email
-
-        WebElement email = driver.findElement(By.className("form-control-01"));
+        WebElement email = driver.findElement(By.id("yourEmail"));
         email.sendKeys("nhu116677@gmail.com");
 
-        //press the button submit
-        WebElement submitButton = driver.findElement(By.tagName("button"));
-        submitButton.click();
+        //send by Client Id
+
+        WebElement clientId = driver.findElement(By.id("ClientId"));
+        clientId.sendKeys("");
+
+        //send by Client FeedBack
+
+        WebElement clientFeedback = driver.findElement(By.id("ClientfeedbackId"));
+        clientFeedback.sendKeys("");
+
+        //send by Project Name
+        WebElement projectName = driver.findElement(By.id("ProjectNameId"));
+        projectName.sendKeys("");
+
+        //send by Project Deadline Time
+        WebElement projectDeadlineTime = driver.findElement(By.id("ProjectTimeId"));
+        projectDeadlineTime.sendKeys("");
+
+        //send by Current Address
+
+        WebElement currentAddress = driver.findElement(By.name("CurrentAddress"));
+        currentAddress.sendKeys("");
+
+        //send by Permanent Adress
+        WebElement permanentAddress = driver.findElement(By.name("PermanentAddress"));
+        permanentAddress.sendKeys("");
 
         //click on the first link
         WebElement link1 = driver.findElement(By.linkText("Click Here."));
         link1.click();
 
-        // click on second link
-        WebElement link2 = driver.findElement(By.partialLinkText("Link"));
-        link2.click();
+        //press the button submit
+        WebElement submitButton = driver.findElement(By.id("btn-submit"));
+        submitButton.click();
+
 
         // If the email address is not in the correct format (i.e., it doesn't contain an `@` sign),
         // the form should not be submitted, and an error message should be displayed.
