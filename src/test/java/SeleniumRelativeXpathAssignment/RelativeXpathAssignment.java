@@ -48,13 +48,13 @@ public class RelativeXpathAssignment {
 
         //Find your hobbies
         //1. The user is able to enter their hobbies using XPath.
-        WebElement yourhobbies = driver.findElement(By.xpath("//input[@id=\"yourHobbiesId\"]"));
+        WebElement yourhobbies = driver.findElement(By.xpath("//input[@id='yourHobbiesId']"));
         yourhobbies.sendKeys("Singing and cruising");
 
         //Find button and click on it
         //2. When the user clicks the "Click Here" button using XPath.,
        // Then the message `"Button clicked:"` should be displayed on the screen.
-        WebElement button = driver.findElement(By.xpath("//button[@id=\"display_text\"]"));
+        WebElement button = driver.findElement(By.xpath("//button[@id='display_text']"));
         button.click();
         System.out.println(button);
 
@@ -72,7 +72,7 @@ public class RelativeXpathAssignment {
 
         //Find your city
         //5. The user is able to enter the city in the designated field.
-        WebElement city = driver.findElement(By.xpath("//input[@id=\"yourCity\"]"));
+        WebElement city = driver.findElement(By.xpath("//input[@id='yourCity']"));
         city.sendKeys("Toronto");
 
         //Find Personal, Office and Professional emails
