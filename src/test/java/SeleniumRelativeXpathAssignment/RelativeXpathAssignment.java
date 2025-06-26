@@ -97,8 +97,11 @@ public class RelativeXpathAssignment {
         //Find street number and house number
         //8. The user can use **any XPath technique** to enter the street number and house number.
 
-        WebElement streetNumber = driver.findElement("//input[@name=\"StreetNo\"]");
+        WebElement streetNumber = driver.findElement(By.xpath("//input[@name= 'StreetNo']"));
         streetNumber.sendKeys("23");
+
+        WebElement houseNumber = driver.findElement(By.xpath("//input[@name='HouseNo']"));
+        houseNumber.sendKeys("1111");
 
 
 
