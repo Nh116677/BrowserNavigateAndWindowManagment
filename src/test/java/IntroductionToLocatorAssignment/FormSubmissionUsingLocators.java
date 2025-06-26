@@ -62,7 +62,7 @@ public class FormSubmissionUsingLocators {
         link1.click();
 
         // click on second link
-        WebElement link2 = driver.findElement(By.partialLinkText("ink"));
+        WebElement link2 = driver.findElement(By.partialLinkText("Link"));
         link2.click();
 
         // If the email address is not in the correct format (i.e., it doesn't contain an `@` sign),
