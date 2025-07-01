@@ -1,5 +1,8 @@
 package RadioButtonsAssignment;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class RadioButtons {
     //Purpose of the Assessment:
     //By completing this assessment, students will:
@@ -38,6 +41,18 @@ public class RadioButtons {
     //   - Select the Lunch radio button from the list of favorite meals.
 
     public static void main(String[] args) {
-        //
+       //Declare instance
+        WebDriver driver = new ChromeDriver();
+        // Maximize window
+        driver.manage().window().maximize();
+
+        //- I want to navigate to `https://syntaxprojects.com/basic-radiobutton-demo-homework.php`
+        //Open browser `https://syntaxprojects.com/basic-radiobutton-demo-homework.php`
+        driver.get("https://syntaxprojects.com/basic-radiobutton-demo-homework.php");
+
+        //1. Choose Your Favorite Beverage:
+        //   - Select the Juice radio button from the list of favorite beverages.
+
+
     }
 }
