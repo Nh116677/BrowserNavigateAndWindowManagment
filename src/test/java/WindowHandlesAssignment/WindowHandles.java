@@ -67,7 +67,7 @@ public class WindowHandles {
             }
         }
         System.out.println(driver.getCurrentUrl());
-        //Switch tje focus to main page
+        //Switch the focus to main page
 
         driver.switchTo().window(mainPageHandle);
         System.out.println(driver.getCurrentUrl());
