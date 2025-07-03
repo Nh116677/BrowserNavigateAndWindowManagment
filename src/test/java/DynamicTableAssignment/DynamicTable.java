@@ -34,13 +34,10 @@ public class DynamicTable {
     public static void main(String[] args) {
         //Declare instance
         WebDriver driver = new ChromeDriver();
-
         //Maximize window
         driver.manage().window().maximize();
-
         //Open browser
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
-
         //Step 1: Login by username
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
         //Step 2: Enter password
@@ -49,7 +46,6 @@ public class DynamicTable {
         driver.findElement(By.id("btnLogin")).click();
         //Step 4: Click on PIM option
         driver.findElement(By.id("menu_pim_viewPimModule")).click();
-
         //1. Look for an Employee ID on Page 3:
         //   take any employee id on page 3 manually.
         //Step 5: Get column by id
@@ -57,7 +53,6 @@ public class DynamicTable {
         boolean notFound = true;
         while (notFound){
             int count = 1;
-
             for(WebElement id : allColumnIDs){
                 String idNo =id.getText();
                 if(idNo.equals("116575A")){
@@ -76,7 +71,6 @@ public class DynamicTable {
             //3. Dynamic Logic:
             //   - The code should be **dynamic**, meaning that it should work even if the employee ID is located on other pages (such as 4, 5, 7, etc.) without changing any part of the logic.
             //   - The script should be able to navigate across pages dynamically and locate the employee ID without requiring manual input of page numbers.
-
             if (notFound){
                 WebElement nextButton = driver.findElement(By.xpath("(//a[text()='Next'])[1]"));
                 nextButton.click();
