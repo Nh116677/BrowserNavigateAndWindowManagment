@@ -45,7 +45,6 @@ public class ExplicitWait {
         // Maximize window
         driver.manage().window().maximize();
 
-
         //- I want to navigate to ("https://syntaxprojects.com/synchronization-explicit-wait-homework.php")
         driver.get("https://syntaxprojects.com/synchronization-explicit-wait-homework.php");
 
