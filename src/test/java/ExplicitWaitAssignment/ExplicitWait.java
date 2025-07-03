@@ -15,15 +15,11 @@ public class ExplicitWait {
     //
     //a. **Master Synchronization with Explicit Waits**: Learn how to apply explicit waits to handle elements that load or change after specific interactions, ensuring synchronization before taking further actions.
     //
-    //
-    //
     //User Story
     //- **Title**: Verifying Synchronization Using Explicit Waits
     //- **As a user,**
     //- I want to navigate to `https://syntaxprojects.com/synchronization-explicit-wait-homework.php`
     //- So that I can ensure the text, button, and checkbox functionalities work as expected using appropriate wait times.
-    //
-    //
     //
     //Acceptance Criteria
     //
