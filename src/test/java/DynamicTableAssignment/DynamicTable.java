@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
-
 public class DynamicTable {
     //Purpose of the Assessment:
     //By completing this assessment, students will:
@@ -59,7 +58,6 @@ public class DynamicTable {
                     System.out.println(count);
                     //2. Dynamic Search and Deletion:
                     //   - Write dynamic code logic that goes to the website, searches for the employee ID across multiple pages , and once found, selects the checkbox associated with that employee.
-
                     //Find the checkbox and click on it
                     WebElement checkbox = driver.findElement(By.xpath("//table/tbody/tr["+ count +"]/td[1]"));
                     checkbox.click();
