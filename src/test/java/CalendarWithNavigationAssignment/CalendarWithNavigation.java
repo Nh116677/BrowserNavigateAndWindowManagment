@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Locale;
 
 public class CalendarWithNavigation {
     //Purpose of the Assessment:
@@ -38,38 +36,58 @@ public class CalendarWithNavigation {
         //Open browser
         driver.get("https://syntaxprojects.com/jquery-date-picker-demo-homework.php");
         //Click on the calendar
-        driver.findElement(By.xpath("//input[@id='from_date']")).click();
+        driver.findElement((By.id("from_date"))).click();
         //Get the month
-
-        WebElement month = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']"));
-        String currentMonth = month.getText();
-        // Find the next button
-        WebElement nextButton = driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']"));
-        boolean notMonth = true;
-        while (notMonth) {
-            //Check if we are at the desired month
+        boolean nofound = true;
+        while (nofound) {
+            WebElement month = driver.findElement(By.xpath("//span[@class ='ui-datepicker-month']"));
+            String currentMonth = month.getText();
             if (currentMonth.equals("July")) {
-                //selection of the date
-                List<WebElement> dates = driver.findElements(By.xpath("//a[@class='ui-state-default']"));
-                for(WebElement date : dates){
-                    String currentDate = date.getText();
-                    if(currentDate.equals("6")){
+                //select the date
+                List<WebElement> allDates = driver.findElements(By.xpath("//table/tbody/tr/td"));
+                for (WebElement date : allDates) {
+                    String requiredDate = date.getText();
+                    if (requiredDate.equals("25")) {
                         date.click();
                     }
                 }
-                notMonth = false;
+                //break the loop
+                nofound = false;
             }
-            //click on next
-            else {
-                nextButton.click();
-                currentMonth = month.getText();
+            if (nofound) {
+                //click on next button
+                WebElement nextBtn = driver.findElement(By.xpath("//span[text()='Next']"));
+                nextBtn.click();
             }
+        }
 
-
+        //Click on the calendar
+        driver.findElement((By.id("to_date"))).click();
+        //Get the month
+        boolean nofound1 = true;
+        while (nofound1) {
+            WebElement month = driver.findElement(By.xpath("//span[@class ='ui-datepicker-month']"));
+            String currentMonth = month.getText();
+            if (currentMonth.equals("September")) {
+                //select the date
+                List<WebElement> allDates = driver.findElements(By.xpath("//table/tbody/tr/td"));
+                for (WebElement date : allDates) {
+                    String requiredDate = date.getText();
+                    if (requiredDate.equals("5")) {
+                        date.click();
+                    }
+                }
+                //break the loop
+                nofound1 = false;
+            }
+            if (nofound1) {
+                //click on next button
+                WebElement nextBtn = driver.findElement(By.xpath("//span[text()='Next']"));
+                nextBtn.click();
+            }
         }
     }
 }
-
 
 
 
